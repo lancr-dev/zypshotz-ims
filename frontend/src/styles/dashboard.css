@@ -1,0 +1,138 @@
+.dashboard-layout {
+  display: flex;
+
+  min-height: 100vh;
+}
+
+.dashboard-main {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-content {
+  padding: 24px;
+}
+
+/*
+    DASHBOARD CARDS
+*/
+.dashboard-cards {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 20px;
+}
+
+.dashboard-card {
+  background-color: var(--card-background);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 16px;
+
+  padding: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: 0.3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--primary-red);
+}
+
+.dashboard-card-info h3 {
+  color: var(--muted-text);
+
+  font-size: 16px;
+
+  margin-bottom: 10px;
+}
+
+.dashboard-card-info h2 {
+  font-size: 32px;
+
+  font-weight: 700;
+}
+
+.dashboard-card-icon {
+  opacity: 0.9;
+}
+
+/*
+    CARD COLORS
+*/
+.card-total .dashboard-card-icon {
+  color: white;
+}
+
+.card-low .dashboard-card-icon {
+  color: var(--low-stock);
+}
+
+.card-out .dashboard-card-icon {
+  color: var(--out-stock);
+}
+
+/*
+    RECENT INVENTORY
+*/
+.recent-inventory {
+  margin-top: 30px;
+
+  background-color: var(--card-background);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 16px;
+
+  overflow: hidden;
+}
+
+.recent-header {
+  padding: 20px;
+
+  border-bottom: 1px solid var(--border-color);
+}
+
+.recent-header h2 {
+  font-size: 20px;
+}
+
+.recent-table-container {
+  overflow-x: auto;
+}
+
+.recent-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.recent-table th,
+.recent-table td {
+  padding: 18px;
+
+  text-align: left;
+}
+
+.recent-table th {
+  background-color: #181818;
+
+  color: var(--muted-text);
+}
+
+.recent-table tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.recent-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}

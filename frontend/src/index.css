@@ -1,0 +1,45 @@
+/*
+    GOOGLE FONT
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/*
+    RESET
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+    ROOT
+*/
+:root {
+  --background-color: #0f0f0f;
+  --secondary-background: #181818;
+  --card-background: #1f1f1f;
+
+  --border-color: #2a2a2a;
+
+  --primary-red: #ff3b3b;
+  --primary-red-hover: #e03131;
+
+  --white-text: #ffffff;
+  --muted-text: rgba(255, 255, 255, 0.65);
+
+  --in-stock: #22c55e;
+  --low-stock: #facc15;
+  --out-stock: #ef4444;
+}
+
+/*
+    BODY
+*/
+body {
+  font-family: 'Inter', sans-serif;
+
+  background-color: var(--background-color);
+
+  color: var(--white-text);
+}
