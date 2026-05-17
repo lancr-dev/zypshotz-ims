@@ -1,7 +1,10 @@
 import axios from 'axios';
 
+const BASE_URL =
+  import.meta.env.MODE === 'development' ? 'http://localhost:5003/api' : '/api';
+
 const API = axios.create({
-  baseURL: 'http://localhost:5003/api',
+  baseURL: BASE_URL,
 });
 
 /*
