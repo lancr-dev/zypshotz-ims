@@ -69,19 +69,19 @@
   font-weight: 600;
 }
 
-.status-badge.In\ Stock {
+.status-badge.in-stock {
   background-color: rgba(34, 197, 94, 0.15);
 
   color: var(--in-stock);
 }
 
-.status-badge.Low\ Stock {
+.status-badge.low-stock {
   background-color: rgba(250, 204, 21, 0.15);
 
   color: var(--low-stock);
 }
 
-.status-badge.Out\ of\ Stock {
+.status-badge.out-of-stock {
   background-color: rgba(239, 68, 68, 0.15);
 
   color: var(--out-stock);

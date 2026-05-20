@@ -60,13 +60,13 @@ function InventoryPage() {
 
         <div className='dashboard-content'>
           <div className='inventory-header'>
-            <h2>Inventory Management</h2>
+            <h2>Stock Management</h2>
 
             <button
               className='add-item-btn'
               onClick={() => setIsModalOpen(true)}
             >
-              Add Item
+              + Add Item
             </button>
           </div>
 

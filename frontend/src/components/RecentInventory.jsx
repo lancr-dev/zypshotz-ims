@@ -1,4 +1,5 @@
 import '../styles/dashboard.css';
+import '../styles/inventory.css';
 
 function RecentInventory({ recentItems }) {
   return (
@@ -31,7 +32,11 @@ function RecentInventory({ recentItems }) {
                 <td>{item.stock}</td>
 
                 <td>
-                  <span className={`status-badge ${item.status}`}>
+                  <span
+                    className={`status-badge ${item.status
+                      .toLowerCase()
+                      .replace(/\s+/g, '-')}`}
+                  >
                     {item.status}
                   </span>
                 </td>

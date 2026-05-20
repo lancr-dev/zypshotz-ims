@@ -89,7 +89,11 @@ function InventoryTable({ inventoryItems, refreshInventory, openEditModal }) {
               <td>{item.stock}</td>
 
               <td>
-                <span className={`status-badge ${item.status}`}>
+                <span
+                  className={`status-badge ${item.status
+                    .toLowerCase()
+                    .replace(/\s+/g, '-')}`}
+                >
                   {item.status}
                 </span>
               </td>
