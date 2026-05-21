@@ -59,8 +59,7 @@ function InventoryModal({ closeModal, refreshInventory, editItem }) {
 
         toast.success('Inventory item updated');
       } else {
-
-      /*
+        /*
                 CREATE
             */
         await createInventoryItem({
@@ -107,15 +106,6 @@ function InventoryModal({ closeModal, refreshInventory, editItem }) {
             name='category'
             placeholder='Category'
             value={formData.category}
-            onChange={handleChange}
-            required
-          />
-
-          <input
-            type='number'
-            name='stock'
-            placeholder='Stock'
-            value={formData.stock}
             onChange={handleChange}
             required
           />

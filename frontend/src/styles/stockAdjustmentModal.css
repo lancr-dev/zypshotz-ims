@@ -1,0 +1,102 @@
+.stock-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+.stock-modal {
+  width: 100%;
+  max-width: 400px;
+
+  background-color: #111111;
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 16px;
+
+  padding: 24px;
+}
+
+.stock-modal h2 {
+  margin-bottom: 10px;
+}
+
+.stock-modal-item {
+  color: var(--muted-text);
+
+  margin-bottom: 20px;
+}
+
+.stock-modal-input-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-bottom: 24px;
+}
+
+.stock-modal-input-group input {
+  padding: 12px;
+
+  border-radius: 10px;
+
+  border: 1px solid var(--border-color);
+
+  background-color: #181818;
+
+  color: white;
+
+  font-size: 16px;
+}
+
+.stock-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 12px;
+}
+
+.stock-modal-btn {
+  border: none;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.cancel-btn {
+  background-color: #2a2a2a;
+
+  color: white;
+}
+
+.confirm-increase-btn {
+  background-color: var(--in-stock);
+
+  color: white;
+}
+
+.confirm-decrease-btn {
+  background-color: var(--out-stock);
+
+  color: white;
+}
+
+.stock-modal-btn:hover {
+  transform: scale(1.03);
+}
