@@ -4,6 +4,8 @@ import DashboardPage from './pages/DashboardPage';
 
 import InventoryPage from './pages/InventoryPage';
 
+import LogsPage from './pages/LogsPage';
+
 function App() {
   return (
     <Routes>
@@ -12,6 +14,8 @@ function App() {
       <Route path='/dashboard' element={<DashboardPage />} />
 
       <Route path='/inventory' element={<InventoryPage />} />
+
+      <Route path='/logs' element={<LogsPage />} />
     </Routes>
   );
 }

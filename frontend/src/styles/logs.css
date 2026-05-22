@@ -1,0 +1,73 @@
+.logs-table-container {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background-color: var(--card-background);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 16px;
+}
+
+.logs-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.logs-table th,
+.logs-table td {
+  padding: 18px;
+
+  text-align: left;
+}
+
+.logs-table th {
+  background-color: #181818;
+
+  color: var(--muted-text);
+
+  font-weight: 600;
+}
+
+.logs-table tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logs-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/*
+    LOG BADGES
+*/
+.log-badge {
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.stock-in {
+  background-color: rgba(34, 197, 94, 0.15);
+
+  color: var(--in-stock);
+}
+
+.stock-out {
+  background-color: rgba(239, 68, 68, 0.15);
+
+  color: var(--out-stock);
+}
+
+.empty-log-message {
+  text-align: center;
+
+  padding: 30px;
+
+  color: var(--muted-text);
+}

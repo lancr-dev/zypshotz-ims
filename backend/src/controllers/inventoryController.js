@@ -195,3 +195,39 @@ export const decreaseStock = async (req, res) => {
     });
   }
 };
+
+/*
+    GET INVENTORY LOGS
+*/
+export const getInventoryLogs = async (req, res) => {
+  try {
+    const logs = await InventoryLog.find()
+      .populate('inventoryId', 'itemName')
+      .sort({
+        createdAt: -1,
+      });
+
+    res.status(200).json(logs);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};
+
+/*
+    DELETE ALL INVENTORY LOGS
+*/
+export const deleteInventoryLogs = async (req, res) => {
+  try {
+    await InventoryLog.deleteMany({});
+
+    res.status(200).json({
+      message: 'All inventory logs deleted successfully',
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};

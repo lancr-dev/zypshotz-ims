@@ -110,6 +110,17 @@ function InventoryModal({ closeModal, refreshInventory, editItem }) {
             required
           />
 
+          {!editItem && (
+            <input
+              type='number'
+              name='stock'
+              placeholder='Stock'
+              value={formData.stock}
+              onChange={handleChange}
+              required
+            />
+          )}
+
           <button type='submit' className='submit-btn'>
             {editItem ? 'Update Item' : 'Create Item'}
           </button>

@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 
-import { LayoutDashboard, Boxes } from 'lucide-react';
+import { LayoutDashboard, Boxes, ClipboardList } from 'lucide-react';
 
 import '../styles/sidebar.css';
 
@@ -38,6 +38,19 @@ function Sidebar() {
           <Boxes size={18} />
 
           <span>Inventory</span>
+        </Link>
+
+        <Link
+          to='/logs'
+          className={
+            location.pathname === '/logs'
+              ? 'sidebar-link active'
+              : 'sidebar-link'
+          }
+        >
+          <ClipboardList size={18} />
+
+          <span>Logs</span>
         </Link>
       </nav>
     </aside>
