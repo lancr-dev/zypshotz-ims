@@ -59,9 +59,9 @@
 }
 
 .stock-out {
-  background-color: rgba(239, 68, 68, 0.15);
+  background-color: rgba(239, 222, 68, 0.15);
 
-  color: var(--out-stock);
+  color: rgb(255, 230, 0);
 }
 
 .empty-log-message {
@@ -70,4 +70,61 @@
   padding: 30px;
 
   color: var(--muted-text);
+}
+
+/*
+    PAGINATION
+*/
+.pagination-container {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 20px;
+}
+
+.pagination-info {
+  color: var(--muted-text);
+
+  font-size: 14px;
+}
+
+.pagination-controls {
+  display: flex;
+
+  gap: 8px;
+}
+
+.pagination-controls button {
+  border: 1px solid var(--border-color);
+
+  background: transparent;
+
+  color: white;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+.active-page {
+  background-color: var(--primary-red) !important;
+
+  border-color: var(--primary-red) !important;
 }

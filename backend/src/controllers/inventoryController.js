@@ -201,13 +201,28 @@ export const decreaseStock = async (req, res) => {
 */
 export const getInventoryLogs = async (req, res) => {
   try {
+    const page = Number(req.query.page) || 1;
+
+    const limit = Number(req.query.limit) || 20;
+
+    const skip = (page - 1) * limit;
+
+    const totalLogs = await InventoryLog.countDocuments();
+
     const logs = await InventoryLog.find()
       .populate('inventoryId', 'itemName')
       .sort({
         createdAt: -1,
-      });
+      })
+      .skip(skip)
+      .limit(limit);
 
-    res.status(200).json(logs);
+    res.status(200).json({
+      logs,
+      currentPage: page,
+      totalPages: Math.ceil(totalLogs / limit),
+      totalLogs,
+    });
   } catch (error) {
     res.status(500).json({
       message: error.message,

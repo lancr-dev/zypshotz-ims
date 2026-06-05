@@ -11,22 +11,34 @@ import { getInventoryLogs } from '../services/logApi';
 function LogsPage() {
   const [logs, setLogs] = useState([]);
 
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const [totalPages, setTotalPages] = useState(1);
+
+  const [totalLogs, setTotalLogs] = useState(0);
+
   /*
         FETCH LOGS
     */
-  const fetchLogs = async () => {
+  const fetchLogs = async (page = 1) => {
     try {
-      const data = await getInventoryLogs();
+      const data = await getInventoryLogs(page, 20);
 
-      setLogs(data);
+      setLogs(data.logs);
+
+      setCurrentPage(data.currentPage);
+
+      setTotalPages(data.totalPages);
+
+      setTotalLogs(data.totalLogs);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    fetchLogs();
-  }, []);
+    fetchLogs(currentPage);
+  }, [currentPage]);
 
   return (
     <div className='dashboard-layout'>
@@ -40,7 +52,13 @@ function LogsPage() {
             <h2>Inventory Logs</h2>
           </div>
 
-          <LogsTable logs={logs} />
+          <LogsTable
+            logs={logs}
+            currentPage={currentPage}
+            totalPages={totalPages}
+            totalLogs={totalLogs}
+            onPageChange={setCurrentPage}
+          />
         </div>
       </main>
     </div>
