@@ -83,17 +83,6 @@ const exportLogsPdf = async (logs) => {
       doc.text(`Generated: ${generatedDate}`, 105, 28, {
         align: 'center',
       });
-
-      // Footer
-      const pageNumber = doc.internal.getNumberOfPages();
-
-      const pageHeight = doc.internal.pageSize.height;
-
-      doc.setFontSize(10);
-
-      doc.text(`Page ${pageNumber}`, 105, pageHeight - 10, {
-        align: 'center',
-      });
     },
   });
 
