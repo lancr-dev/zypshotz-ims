@@ -10,6 +10,7 @@ import {
   decreaseStock,
   getInventoryLogs,
   deleteInventoryLogs,
+  exportInventoryLogs,
 } from '../controllers/inventoryController.js';
 
 const router = express.Router();
@@ -27,6 +28,8 @@ router.get('/', getInventoryItems);
 router.get('/logs/all', getInventoryLogs);
 
 router.delete('/logs/all', deleteInventoryLogs);
+
+router.get('/logs/export', exportInventoryLogs);
 
 router.get('/:id', getInventoryItem);
 

@@ -246,3 +246,22 @@ export const deleteInventoryLogs = async (req, res) => {
     });
   }
 };
+
+/*
+    GET ALL INVENTORY LOGS FOR PDF EXPORT
+*/
+export const exportInventoryLogs = async (req, res) => {
+  try {
+    const logs = await InventoryLog.find()
+      .populate('inventoryId', 'itemName')
+      .sort({
+        createdAt: -1,
+      });
+
+    res.status(200).json(logs);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};

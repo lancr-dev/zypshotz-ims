@@ -13,6 +13,9 @@ function Navbar() {
       case '/inventory':
         return 'Inventory';
 
+      case '/logs':
+        return 'Logs';
+
       default:
         return 'Analytics';
     }

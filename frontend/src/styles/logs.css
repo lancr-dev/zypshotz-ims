@@ -128,3 +128,64 @@
 
   border-color: var(--primary-red) !important;
 }
+
+/*
+    LOGS HEADER ACTIONS
+*/
+.logs-header-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+/*
+    DOWNLOAD PDF BUTTON
+*/
+.download-logs-btn {
+  background-color: #2563eb;
+
+  color: white;
+
+  border: none;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.download-logs-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/*
+    CLEAR LOGS BUTTON
+*/
+.clear-logs-btn {
+  background-color: var(--out-stock);
+
+  color: white;
+
+  border: none;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.clear-logs-btn:hover {
+  opacity: 0.9;
+}
